@@ -1,0 +1,337 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  /* color: rgb(55, 53, 47); */
+}
+
+.container {
+  max-width: 1010px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.add-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding:20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-height: 300px;
+  max-width: 500px; 
+  font-size: 14px;
+}
+
+#addTaskBtn {
+  width: 120px;
+  float: right;
+  right: 30px;
+  position: absolute;
+  bottom: 20px;
+}
+
+.add-container label {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.add-container input,
+.add-container select {
+  width: 60%;
+  border: none;
+  border-bottom: 1px solid;
+  color: rgb(55, 53, 47);
+}
+
+
+
+.backDrop {
+  width: 100%;
+  height: 100%;
+  background-color: #0101012e;
+  position: absolute;
+  top: 0;
+  display: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+.actions {
+  margin-bottom: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#search {
+  padding: 10px;
+  width: 60%;
+}
+
+#searchInput {
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.add-container  input:focus-visible,
+.add-container  select:focus-visible{
+  outline: none;
+  border-bottom: 1px solid;
+}
+
+#newTaskBtn,
+#addTaskBtn,
+#searchButton {
+  padding: 10px 20px;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  color: rgb(55, 53, 47);
+  border: 1px solid rgb(55, 53, 47);
+}
+
+.task-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin-top: 25px;
+}
+
+.taskHeadking {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+
+
+.tablist {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  flex-grow: 1;
+}
+
+.tabItem {
+  display: flex;
+  align-items: center;
+  background: none;
+  height: 100%;
+  border-bottom: 1px solid rgb(55, 53, 47);
+  padding-top: 2px;
+}
+
+.tabItem .tab div {
+  pointer-events: none;
+}
+
+.tabItem .tab span {
+  pointer-events: none;
+}
+
+.tab {
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  white-space: nowrap;
+  height: 28px;
+  font-size: 14px;
+  line-height: 1.2;
+  padding: 5px;
+  min-width: 0px;
+  padding-left: 8px;
+  padding-right: 8px;
+  color: rgb(55, 53, 47);
+  font-weight: 500;
+  max-width: 220px;
+}
+
+.tab.selected {
+  border-bottom: 2px solid rgb(55, 53, 47);
+}
+
+.searchText {
+  margin-left: 9px;
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#searchInput {
+  padding-left: 30px;
+}
+
+.all {
+  width: 16px;
+  height: 16px;
+  transform: scale(1.2);
+  background: url('assets/database_gray.svg') center center no-repeat;
+  fill: rgb(55, 53, 47);
+  margin-right: 0px;
+}
+
+.notStarted {
+  width: 16px;
+  height: 16px;
+  transform: scale(1.2);
+  background: url('assets/close_gray.svg') center center no-repeat;
+  fill: rgb(55, 53, 47);
+  margin-right: 0px;
+}
+
+.inProgress {
+  width: 16px;
+  height: 16px;
+  transform: scale(1.2);
+  background: url('assets/playback-play_gray.svg') center center no-repeat;
+  fill: rgb(55, 53, 47);
+  margin-right: 0px;
+}
+
+.onHold {
+  width: 16px;
+  height: 16px;
+  transform: scale(1.2);
+  background: url('assets/playback-pause_gray.svg') center center no-repeat;
+  fill: rgb(55, 53, 47);
+  margin-right: 0px;
+}
+
+.review {
+  width: 16px;
+  height: 16px;
+  transform: scale(1.2);
+  background: url('assets/sync_gray.svg') center center no-repeat;
+  fill: rgb(55, 53, 47);
+  margin-right: 0px;
+}
+
+.completed {
+  width: 16px;
+  height: 16px;
+  transform: scale(1.2);
+  background: url('assets/checkmark-square_gray.svg') center center no-repeat;
+  fill: rgb(55, 53, 47);
+  margin-right: 0px;
+}
+
+span {
+  margin-left: 10px;
+}
+
+.tskNmae {
+  width: 170px;
+  border-right: 1px solid #ccc;
+}
+
+.tskDesc {
+  width: 280px;
+  border-right: 1px solid #ccc;
+}
+
+.tskStatus {
+  width: 120px;
+  border-right: 1px solid #ccc;
+}
+
+.tskpriority {
+  width: 100px;
+  border-right: 1px solid #ccc;
+}
+
+.tskDeadline,.tskAssignee {
+  width: 106px;
+  border-right: 1px solid #ccc;
+}
+.tskDelete {
+  width: 16px;
+ 
+}
+.tskEdit {
+  width: 26px;
+  border-right: 1px solid #ccc; 
+}
+
+.ipTask {
+  background: #378ce778;
+  padding: 2px 9px;
+  border-radius: 16px;
+}
+
+.nsTask {
+  background: #fba83469;
+  padding: 2px 9px;
+  border-radius: 16px;
+}
+
+.ohTask {
+  background: #e4fb3469;
+  padding: 2px 9px;
+  border-radius: 16px;
+}
+
+.trTask {
+  background: #fb803469;
+  padding: 2px 9px;
+  border-radius: 16px;
+}
+
+.cTask {
+  background: #37e77a78;
+  padding: 2px 9px;
+  border-radius: 16px;
+}
+
+.hPriority {
+  background: #e7373778;
+  padding: 2px 9px;
+  border-radius: 5px;
+}
+
+.mPriority {
+  background: #fba83469;
+  padding: 2px 9px;
+  border-radius: 5px;
+}
+
+.lPriority {
+  background: #37e77a78;
+  padding: 2px 9px;
+  border-radius: 5px;
+}
+
+.close-btn {
+  width: 100%;
+  text-align: end;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.taskSec {
+  cursor: pointer;
+}
+.taskSec:hover {
+  background-color: #cccccc82;
+
+}
+
+.taskSec .tab span,
+.taskSec .tab i{
+  pointer-events: none;
+}

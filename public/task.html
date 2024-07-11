@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Manager</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Task Manager</h1>
+    <div class="actions">
+      <div class="tab">
+        <div id="searchBar" style="display: none;">
+          <div class="search-container">
+            <i class="fa fa-search search-icon"></i>
+            <input type="search" id="searchInput">
+          </div>
+        </div>
+
+        <span class="searchText" id="searchButton">Search</span>
+      </div>
+      <button id="newTaskBtn">New Task</button>
+    </div>
+    <div class="tablist">
+      <div class="tabItem">
+        <div class="allTab tab selected">
+          <div class="all">
+          </div>
+          <span>All</span>
+        </div>
+        <div class="nsTab tab">
+          <div class="notStarted">
+          </div>
+          <span>Not Started</span>
+        </div>
+        <div class="ipTab tab">
+          <div class="inProgress">
+          </div>
+          <span>In Progress</span>
+        </div>
+        <div class="ohTab tab">
+          <div class="onHold">
+          </div>
+          <span>On Hold</span>
+        </div>
+        <div class="trTab tab">
+          <div class="review">
+          </div>
+          <span>To Review</span>
+        </div>
+        <div class="cTab tab">
+          <div class="completed">
+          </div>
+          <span>Completed</span>
+        </div>
+      </div>
+    </div>
+    <div class="task-table">
+      <div class="taskHeadking">
+        <div class="tab tskNmae">
+          <i class="fa fa-file-text"></i>
+          <span>Task Name</span>
+        </div>
+        <div class="tab tskDesc">
+          <i class="fa fa-th-list"></i>
+          <span>Task Description</span>
+        </div>
+        <div class="tab tskStatus">
+          <i class="fa fa-bar-chart"></i>
+          <span>Status</span>
+        </div>
+        <div class="tab tskpriority">
+          <i class="fa fa-star"></i>
+          <span>Priority</span>
+        </div>
+        <div class="tab tskDeadline">
+          <i class="fa fa-calendar-check-o"></i>
+          <span>Deadline</span>
+        </div>
+        <div class="tab tskAssignee">
+          <i class="fa fa-user"></i>
+          <span>Assignee</span>
+        </div>
+        <div class="tab tskedit">
+      
+       
+        </div>
+        <div class="tab tskDelete">
+          
+       
+        </div>
+      </div>
+      <div class="taskBody">
+      </div>
+    </div>
+  </div>
+
+  <div class="backDrop">
+    <div class="add-container task-table">
+      <div class="close-btn">
+        <i class="fa fa fa-close"></i>
+      </div>
+      <label for="task">
+        <div>
+          <i class="fa fa-file-text"></i>
+          Task Name
+        </div>
+        <input class="task" name="task"  placeholder="Enter task name"/>
+      </label>
+      <label for="taskDescription">
+        <div>
+          <i class="fa fa-th-list"></i>
+          Task Description
+        </div>
+        <input class="taskDescription" name="taskDescription" placeholder="Enter task Description" />
+      </label>
+      <label for="taskStatus">
+        <div>
+          <i class="fa fa-bar-chart"></i>
+          Task Status
+        </div>
+        <select class="taskStatus" name="taskStatus">
+        <option value="IP">In Progress</option>  
+        <option value="NS">Not Started</option>  
+        <option value="OH">On Hold</option>  
+        <option value="TR">To Review</option>
+        <option value="C">Completed</option>
+        </select>
+      </label>
+      <label for="taskPriority">
+        <div>
+          <i class="fa fa-star"></i>
+          Task Priority
+        </div>
+        <select class="taskPriority" name="taskPriority">
+          <option value="1">High</option>
+          <option value="2">Medium</option>
+          <option value="3">Low</option>
+        </select>
+      </label>
+      <label for="taskDeadLine">
+        <div>
+          <i class="fa fa-calendar-check-o"></i>
+          Task Deadline
+        </div>
+        <input class="taskDeadLine" type="date" />
+      </label>
+      <label for="taskAssignee">
+        <div>
+          <i class="fa fa-user"></i>
+          Assignee
+        </div>
+        <input class="taskAssignee" type="text" />
+      </label>
+      <button id="addTaskBtn">New Task</button>
+    </div>
+  </div>
+  <script src="task.js"></script>
+</body>
+
+</html>

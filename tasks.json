@@ -1,0 +1,53 @@
+[
+  {
+    "id": "1713381078248",
+    "name": "Complete Task1",
+    "description": "Javascript Ajax calls",
+    "status": {
+      "sName": "IP",
+      "name": "In Progress",
+      "style": "ipTask"
+    },
+    "priority": {
+      "sName": "1",
+      "name": "High",
+      "style": "hPriority"
+    },
+    "deadLine": "2024-04-15",
+    "assignee": "Saraswathi"
+  },
+  {
+    "id": "1713381119446",
+    "name": "Complete Task 2",
+    "description": "Integrate Nodejs",
+    "status": {
+      "sName": "C",
+      "name": "Completed",
+      "style": "cTask"
+    },
+    "priority": {
+      "sName": "2",
+      "name": "Medium",
+      "style": "mPriority"
+    },
+    "deadLine": "2024-04-15",
+    "assignee": "Nithish"
+  },
+  {
+    "id": "1713381158531",
+    "name": "Complete Task3 ",
+    "description": "Write CRUD operation in express",
+    "status": {
+      "sName": "TR",
+      "name": "To Review",
+      "style": "trTask"
+    },
+    "priority": {
+      "sName": "3",
+      "name": "Low",
+      "style": "lPriority"
+    },
+    "deadLine": "2024-04-16",
+    "assignee": "Hari"
+  }
+]
